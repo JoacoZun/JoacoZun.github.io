@@ -244,6 +244,8 @@ h6 {
 .navmenu {
   padding: 0;
   z-index: 9997;
+  height: 100vh; 
+  overflow: hidden;  /* Ocultar las barras de scroll */
 }
 
 .navmenu ul {
