@@ -815,10 +815,20 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  /* Añadir altura fija o proporcional */
+  aspect-ratio: 16 / 9;  /* Mantiene una proporción de aspecto consistente */
+  height: 0;
+  padding-bottom: 56.25%; /* Alternativa al aspect-ratio para mejor compatibilidad */
 }
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  width: 100%;    /* Ocupa el 100% del ancho del contenedor */
+  height: 100%;   /* Ocupa el 100% de la altura del contenedor */
+  object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
+  position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+  top: 0;
+  left: 0;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -880,6 +890,13 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .portfolio .portfolio-content {
+    aspect-ratio: 4 / 3; /* Proporción diferente para pantallas más pequeñas */
+    padding-bottom: 75%;
+  }
 }
 
 /*--------------------------------------------------------------
