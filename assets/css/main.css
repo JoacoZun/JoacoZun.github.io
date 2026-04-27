@@ -708,6 +708,37 @@ section,
   background-color: var(--accent-color);
 }
 
+.skills-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.skills-box h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-tags span {
+  background: #f1f3f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills-tags span:hover {
+  background: #0d6efd;
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
